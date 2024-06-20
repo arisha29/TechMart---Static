@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.drop {
+    background-color: #314f79f1;
+}
+
+.blue {
+    color: #314f79;
+}
+
+.contact {
+    background: rgb(223, 224, 220);
+    background: linear-gradient(101deg, rgba(223, 224, 220, 1) 0%, rgba(53, 69, 102, 1) 85%);
+}
+
+.checkout {
+    background: rgb(223, 224, 220);
+    background: linear-gradient(101deg, rgba(223, 224, 220, 1) 0%, rgba(53, 69, 102, 1) 85%);
+}
+
+.custom-scrollbar {
+    height: 50px;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #314f79;
+    border-radius: 6px;
+}
+
+/* ----button--- */
+.Btn {
+    width: 165px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #314f79;
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Btn:before {
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    content: "";
+    background-color: #314f79;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.Btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.Btn:hover {
+    background-color: #314f79;
+    /* Change background color to blue */
+    color: white;
+    /* Change text color to white */
+}
+
+.Btn:active {
+    transform: translate(5px, 5px);
+    transition-duration: .3s;
+}
+
+.Btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* truck loader */
+.loader {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.truckWrapper {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: hidden;
+}
+
+/* truck upper body */
+.truckBody {
+    width: 130px;
+    height: fit-content;
+    margin-bottom: 6px;
+    animation: motion 1s linear infinite;
+}
+
+/* truck suspension animation*/
+@keyframes motion {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* truck's tires */
+.truckTires {
+    width: 130px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 15px;
+    position: absolute;
+    bottom: 0;
+}
+
+.truckTires svg {
+    width: 24px;
+}
+
+.road {
+    width: 100%;
+    height: 1.5px;
+    background-color: #282828;
+    position: relative;
+    bottom: 0;
+    align-self: flex-end;
+    border-radius: 3px;
+}
+
+.road::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #282828;
+    right: -50%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+    border-left: 10px solid white;
+}
+
+.road::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #282828;
+    right: -65%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+    border-left: 4px solid white;
+}
+
+.lampPost {
+    position: absolute;
+    bottom: 0;
+    right: -90%;
+    height: 90px;
+    animation: roadAnimation 1.4s linear infinite;
+}
+
+@keyframes roadAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-350px);
+    }
+}
