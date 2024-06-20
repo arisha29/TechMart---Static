@@ -1,8 +1,9 @@
-# React + Vite
+# TechMart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An e-commerce platform showcasing a variety of products including mobile phones, laptops, headphones, and accessories. Built with React and TailwindCSS for a responsive and intuitive user experience.
 
-Currently, two official plugins are available:
+# Preview
+Check out the live preview of the site: https://techmart29.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Thank you for checking out our e-commerce platform! If you have any questions or feedback, please don't hesitate to reach out.
