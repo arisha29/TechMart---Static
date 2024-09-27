@@ -39,7 +39,9 @@ const Navbar = (props) => {
     <div className={props.className}>
       <div className={props.className2}>
         <div className="flex items-center sm:gap-6">
-          <img src={logo} alt="logo" width={"70px"} className="nav-obj" />
+          <NavLink to="/">
+            <img src={logo} alt="logo" width={"70px"} className="nav-obj" />
+          </NavLink>
           <h1 className="nav-obj sm:text-[5vw] md:text-[1.5vw] lg:text-[2vw] tracking-wider hover:underline">
             <NavLink to="/">TECHMART</NavLink>
           </h1>
@@ -85,7 +87,7 @@ const Navbar = (props) => {
               CART
             </NavLink>
           </h1>
-         
+
           <h1 className="nav-obj sm:text-[1vw] md:text-[1.5vw] lg:text-[2vw] tracking-wider hover:underline">
             <NavLink
               className={(e) => {
