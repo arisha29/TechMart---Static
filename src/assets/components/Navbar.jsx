@@ -85,7 +85,30 @@ const Navbar = (props) => {
               CART
             </NavLink>
           </h1>
+         
+          <h1 className="nav-obj sm:text-[1vw] md:text-[1.5vw] lg:text-[2vw] tracking-wider hover:underline">
+            <NavLink
+              className={(e) => {
+                return e.isActive ? "blue" : "";
+              }}
+              to="/"
+            >
+              Login
+            </NavLink>
+          </h1>
+
+          <h1 className="nav-obj sm:text-[1vw] md:text-[1.5vw] lg:text-[2vw] tracking-wider hover:underline">
+            <NavLink
+              className={(e) => {
+                return e.isActive ? "blue" : "";
+              }}
+              to="/"
+            >
+              sign up
+            </NavLink>
+          </h1>
         </div>
+
         {/* TiThMenu Icon for Sidebar */}
         <div className="md:hidden">
           <TiThMenu
@@ -96,6 +119,7 @@ const Navbar = (props) => {
           />
         </div>
       </div>
+
       {/* Transparent Sidebar */}
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
